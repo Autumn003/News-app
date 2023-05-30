@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="asset/logo.png" alt="">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="trending" onclick="onNavItemClick('trending')">Trending</li>
+                    <li class="hover-link nav-item" id="technology"onclick="onNavItemClick('technology')">Tech</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. stock market">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="main-container">
+
+        <div class="weather-card container">
+            <div class="search flex">
+                <input type="text" placeholder="Search City Name" spellcheck="false">
+                <button><img src="asset/search.png" alt=""></button>
+            </div>
+            <div class="error">
+                <p>Invalid City Name</p>
+            </div>
+            <div class="weather flex">
+                <img src="asset/clear.png" alt="" class="weather-icon">
+                <h1 class="temp">22°c</h1>
+                <h2 class="city">Delhi</h2>
+                <div class="details">
+                    <div class="col flex">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                        <img src="asset/humidity.png" alt="">
+                    </div>
+                    <div class="col flex">
+                        <div>
+                            <p class="wind">25 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                        <img src="asset/wind.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="iweather flex">
+                <img src="asset/weather.png" alt="" class="weather-icon">
+                <h1 class="temp">__°c</h1>
+                <h2 class="city">City</h2>
+                <div class="details">
+                    <div class="col flex">
+                        <div>
+                            <p class="humidity">__%</p>
+                            <p>Humidity</p>
+                        </div>
+                        <img src="asset/humidity.png" alt="">
+                    </div>
+                    <div class="col flex">
+                        <div>
+                            <p class="wind">__ km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                        <img src="asset/wind.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roller container flex">
+            <img src="asset/brknews.png" alt="">
+            <marquee bgcolor="#ccc" loop="" scrollamount="7" width="100%">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, quis molestiae! Recusandae explicabo esse, sequi dicta quibusdam debitis id ab laborum, delectus iure ad laudantium!</marquee>
+        </div>
+
+        <main>
+            <div class="cards-container container flex" id="cards-container">
+            
+            </div>
+        </main>
+
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="News-Image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the tittle</h3>
+                    <h6 class="news-source" id="news-source">End gadget 29/05/2023</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed facilis, voluptates ducimus in optio culpa error iure praesentium! Placeat, nam?</p>
+
+                </div>
+            </div>
+        </template>
+
+      <footer>
+     
+
+    </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
